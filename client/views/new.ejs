@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bully Watch</title>
+  </head>
+  <body>
+    <a href="/">Home</a>
+    <h2>Report a Bully</h2>
+    <form action="/bullies" method="post">
+      <p><label>Name: </label><input type="text" name="name"></p>
+      <p><label>Age: </label><input type="text" name="age"></p>
+      <p><label>Type:</label>
+        <select name="type">
+          <option value="Physical">Physical</option>
+          <option value="Verbal">Verbal</option>
+          <option value="Emotional">Emotional</option>
+          <option value="Romantic">Romantic</option>
+      </select></p>
+      <p><label>Report: </label></p>
+      <p><textarea name="reports" rows="4" cols="50"></textarea></p>
+      <p><input type="submit" name="submit" value="Report"></p>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BULLY WATCH</title>
+  </head>
+  <body>
+    <h1>WATCH OUT FOR BULLIES</h1>
+    <a href="/bullies/new">Report a bully</a>
+    <h3>Bullies list</h3>
+    <% for (var i in bullies) { %>
+      <p><strong><%= bullies[i].name %></strong> - <%= bullies[i].reports.length %> reports</p>
+      <p>Age: <%= bullies[i].age %> | Type: <%= bullies[i].type %></p>
+      <a href="/bullies/<%= bullies[i]._id %>">Details</a> | <a href="/bullies/edit/<%= bullies[i]._id %>">Edit</a>
+      <hr>
+    <% } %>
+  </body>
+</html>

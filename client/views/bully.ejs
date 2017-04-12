@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bully Watch</title>
+  </head>
+  <body>
+    <a href="/">Home</a>
+    <h2><%= bully.name %></h2>
+    <p>Age: <%= bully.age %></p>
+    <p>Type: <%= bully.type %></p>
+    [<a href="/bullies/edit/<%= bully._id %>">edit</a>]
+    <p><strong>Reports:</strong> (count: <%= bully.reports.length %>)</p>
+    <% for (var i = 0; i < bully.reports.length; i++) { %>
+      <p><%= bully.reports[i] %></p>
+      <hr>
+    <% } %>
+  </body>
+</html>
